@@ -122,15 +122,15 @@
 	
 	<script>   // Пользовательский код
 
-        function FromUnityToJs (text)   // функция вызывается из Unity
+        function FromUnityToJs ()   // функция вызывается из Unity
         {
-        callMethodWallPost(text);
+        callMethodWallPost();
         }
 
-        function callMethodWallPost(text) // вызываем метод ВК
+        function callMethodWallPost() // вызываем метод ВК
         {
         vkBridge.send('VKWebAppShowWallPostBox', {
-          message: text
+          message: 'text'
           })
           .then((data) => {
             if (data.post_id) {
